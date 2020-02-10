@@ -1,16 +1,10 @@
-seconds = int(input('Сколько секунд вы хотите перевести? '))
+my_list = list(range(int(input('Введите количество элементов списка: '))))
+stage = 1
+i = 0
+print(my_list)
 
-hours = str(seconds // 3600)
-minutes = str((seconds % 3600) // 60)
-seconds = str(seconds % 60)
-
-if len(hours) == 1:
-    hours = '0' + hours
-
-if len(minutes) == 1:
-    minutes = '0' + minutes
-
-if len(seconds) == 1:
-    seconds = '0' + seconds
-
-print(f'{hours}:{minutes}:{seconds}')
+while stage <= len(my_list) // 2:
+    my_list[i + 1], my_list[i] = my_list[i], my_list[i + 1]
+    stage += 1
+    i += 2
+print(my_list)

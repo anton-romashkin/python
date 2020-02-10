@@ -1,6 +1,10 @@
-number = int(input('Введите число: '))
-number2 = int(str(number) + str(number))
-number3 = int(str(number2) + str(number))
+month = int(input('Введите месяц в числовом формате: '))
+#  через словарь
+seasons = {1: 'зима', 2: 'зима', 3: 'весна', 4: 'весна', 5: 'весна', 6: 'лето',
+           7: 'лето', 8: 'лето', 9: 'осень', 10: 'осень', 11: 'осень', 12: 'зима'}
+print(seasons[month])
 
-num_sum = number + number2 + number3
-print(num_sum)
+#  через список
+seasons_list = [1, 'зима', 2, 'зима', 3, 'весна', 4, 'весна', 5, 'весна', 6, 'лето',
+           7, 'лето', 8, 'лето', 9, 'осень', 10, 'осень', 11, 'осень', 12, 'зима']
+print(f'через список тоже {seasons_list[seasons_list.index(month)+1]}')
