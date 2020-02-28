@@ -1,4 +1,5 @@
-import  math
+import math
+
 
 class Cell:
     def __init__(self, cell_count):
@@ -21,7 +22,6 @@ class Cell:
         self.cell_count = int(round(self.cell_count, 0))
 
     def make_order(self):
-        result = ''
         order = self.cell_count
         num_rows = math.ceil(order / 5)
         for line in range(num_rows):
